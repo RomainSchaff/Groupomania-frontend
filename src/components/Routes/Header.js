@@ -121,7 +121,7 @@ function Header() {
         <StyledTitle>Groupomania</StyledTitle>
       </TitleDiv>
       <NavLinkBar>
-        <StyledLink to="/">
+        <StyledLink to="Groupomania-frontend/">
           <HomeIcon
             fontSize="large"
             sx={{
@@ -131,20 +131,24 @@ function Header() {
         </StyledLink>
         {userData ? (
           <>
-            <StyledLink to="/profile" $isProfileLink>
+            <StyledLink to="Groupomania-frontend/profile" $isProfileLink>
               {profileImg ? (
                 <ProfileImg src={profileImg.image_url} alt="Profile" />
               ) : (
                 <ProfileImg src={DefaultProfileImg} alt="Profile" />
               )}
             </StyledLink>
-            <StyledLink to="/" onClick={handleLogout} $isFullLink>
+            <StyledLink
+              to="Groupomania-frontend/"
+              onClick={handleLogout}
+              $isFullLink
+            >
               <LogoutIcon fontSize="large" />
             </StyledLink>
           </>
         ) : (
           <>
-            <StyledLink to="/">Login</StyledLink>
+            <StyledLink to="Groupomania-frontend/">Login</StyledLink>
           </>
         )}
       </NavLinkBar>

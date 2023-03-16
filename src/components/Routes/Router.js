@@ -11,7 +11,7 @@ function Router() {
       <Routes>
         <Route path="Groupomania-frontend/" element={<Home />} />
         <Route path="Groupomania-frontend/Profile" element={<Profile />} />
-        <Route path="Groupomania-frontend/*" />
+        <Route path="Groupomania-frontend/*" element={<Home />} />
       </Routes>
       <Footer />
     </div>
