@@ -6,4 +6,4 @@ Pour lancer ce projet :
 
 "npm install" => "npm start"
 
-Le projet est hébergé à l'adresse : "".
+Le projet est hébergé à l'adresse : "https://romainschaff.github.io/Groupomania-frontend/".
