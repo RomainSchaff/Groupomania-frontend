@@ -7,7 +7,8 @@ import styled from "styled-components";
 const ProfilePage = styled.div`
   padding: 20px 0px;
   background-color: white;
-  min-height: 75vh;
+  min-height: 100vh;
+  margin-bottom: 50px;
 `;
 
 function Profile() {

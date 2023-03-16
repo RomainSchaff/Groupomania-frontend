@@ -69,6 +69,9 @@ function Home() {
                 endIcon={<ArrowDropDownIcon />}
                 onClick={handleloadMore}
                 size="small"
+                sx={{
+                  margin: "5px 0px 70px 0px",
+                }}
               >
                 Afficher plus
               </Button>

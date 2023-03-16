@@ -7,6 +7,10 @@ const StyledGlobalStyle = createGlobalStyle`
     margin: 0px;
     padding: 0px;
   }
+
+  body {
+    min-height: 100vh;
+  }
 `;
 
 export default StyledGlobalStyle;

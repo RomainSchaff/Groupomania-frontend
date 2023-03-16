@@ -5,7 +5,7 @@ import { IconButton } from "@mui/material";
 import { CancelIconStyled } from "../Home/Comment/DeleteComment";
 
 const StyledFooter = styled.div`
-  position: sticky;
+  position: fixed;
   bottom: 0;
   width: 100%;
   padding: 10px;
@@ -41,7 +41,7 @@ function Footer() {
             onClick={handleClose}
             sx={{
               position: "absolute",
-              top: "10px",
+              bottom: "40px",
               right: "2%",
               color: "#1a2dba",
               fontSize: 16,
