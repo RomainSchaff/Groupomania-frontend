@@ -9,9 +9,9 @@ function Router() {
     <div>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Profile" element={<Profile />} />
-        <Route path="/*" />
+        <Route path="Groupomania-frontend/" element={<Home />} />
+        <Route path="Groupomania-frontend/Profile" element={<Profile />} />
+        <Route path="Groupomania-frontend/*" />
       </Routes>
       <Footer />
     </div>
