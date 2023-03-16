@@ -7,7 +7,7 @@ import { deleteOneComment, getComments } from "../../../services/axios";
 import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
 
-const CancelIconStyled = styled(CancelIcon)(`
+export const CancelIconStyled = styled(CancelIcon)(`
 position: absolute;
 top: 0px;
 right: 0px;

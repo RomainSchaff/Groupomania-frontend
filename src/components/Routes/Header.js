@@ -53,7 +53,7 @@ const ProfileImg = styled.img`
 `;
 
 export const StyledLink = styled(Link)`
-  padding: 4px;
+  padding: 10px;
   margin: 0px 10px;
   color: white;
   text-decoration: none;
@@ -121,16 +121,16 @@ function Header() {
         <StyledTitle>Groupomania</StyledTitle>
       </TitleDiv>
       <NavLinkBar>
-        <StyledLink to="Groupomania-frontend/">
-          <HomeIcon
-            fontSize="large"
-            sx={{
-              fontSize: "2.5rem",
-            }}
-          />
-        </StyledLink>
         {userData ? (
           <>
+            <StyledLink to="Groupomania-frontend/">
+              <HomeIcon
+                fontSize="large"
+                sx={{
+                  fontSize: "2.5rem",
+                }}
+              />
+            </StyledLink>
             <StyledLink to="Groupomania-frontend/profile" $isProfileLink>
               {profileImg ? (
                 <ProfileImg src={profileImg.image_url} alt="Profile" />
@@ -148,7 +148,7 @@ function Header() {
           </>
         ) : (
           <>
-            <StyledLink to="Groupomania-frontend/">Login</StyledLink>
+            <StyledLink to="Groupomania-frontend/">Login Page</StyledLink>
           </>
         )}
       </NavLinkBar>

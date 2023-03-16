@@ -79,10 +79,11 @@ function Home() {
                 }}
                 sx={{
                   position: "fixed",
-                  bottom: "30px",
+                  bottom: "20px",
                   right: "4%",
                   color: "#1a2dba",
                   fontSize: 16,
+                  zIndex: 10,
                 }}
               >
                 <ArrowCircleUpIcon fontSize="large" sx={{ opacity: 0.8 }} />
