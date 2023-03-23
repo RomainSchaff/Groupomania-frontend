@@ -80,9 +80,13 @@ function AddPost({ setPostsDatas }) {
     }
 
     async function uploadPost() {
+      console.log(data);
       addPost(data).then(() => {
         getPosts().then((res) => {
-          setPostsDatas(res.data);
+          console.log(res);
+          console.log(res.data);
+          console.log(res.data.rows);
+          setPostsDatas(res.data.rows);
         });
       });
     }

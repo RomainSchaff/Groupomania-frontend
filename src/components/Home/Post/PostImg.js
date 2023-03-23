@@ -8,8 +8,8 @@ function PostImg({ postId }) {
   useEffect(() => {
     async function fetchPostImg() {
       getPostImg(postId).then((res) => {
-        if (res.data[0]) {
-          setPostImg(res.data[0].image_url);
+        if (res.data.rows[0]) {
+          setPostImg(res.data.rows[0].image_url);
         }
       });
     }

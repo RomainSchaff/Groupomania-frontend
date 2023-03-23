@@ -11,7 +11,7 @@ function DeletePost({ postId, setPostsDatas }) {
     async function deletePost() {
       deleteOnePost(postId).then(() => {
         getPosts().then((res) => {
-          setPostsDatas(res.data);
+          setPostsDatas(res.data.rows);
         });
       });
     }

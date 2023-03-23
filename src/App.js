@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     if (userDataStorage && loading) {
       getUserData(userDataStorage.user_id).then((res) => {
-        setUserData(res.data[0]);
+        setUserData(res.data);
         console.log("User Datas Ok");
       });
     }

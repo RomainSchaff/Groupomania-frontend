@@ -47,7 +47,7 @@ function UploadImg() {
         console.log(res);
         getProfilImg(userData.user_id).then((res) => {
           console.log(res);
-          setProfileImg(res.data[0]);
+          setProfileImg(res.data.rows[0]);
         });
       });
     }

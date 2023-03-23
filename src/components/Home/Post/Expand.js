@@ -42,7 +42,7 @@ function Expand({ postId }) {
   useEffect(() => {
     async function fetchComments() {
       getComments(postId).then((res) => {
-        setComments(res.data);
+        setComments(res.data.rows);
         setLoading(false);
       });
     }

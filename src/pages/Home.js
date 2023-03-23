@@ -9,7 +9,7 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { getPosts } from "../services/axios";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Button } from "@mui/material";
-import DisplayUsers from "../components/Home/Users/users";
+import DisplayUsers from "../components/Home/Users/DisplayUsers";
 import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 import IconButton from "@mui/material/IconButton";
 
@@ -43,7 +43,7 @@ function Home() {
   useEffect(() => {
     if (loadPost && userData) {
       getPosts().then((res) => {
-        setPostsDatas(res.data);
+        setPostsDatas(res.data.rows);
         setLoadPost(false);
       });
     }

@@ -125,12 +125,12 @@ function ProfileUpdated() {
     if (userData) {
       async function fetchProfileImg() {
         getProfilImg(userData.user_id).then((res) => {
-          setProfileImg(res.data[0]);
+          setProfileImg(res.data.rows[0]);
         });
       }
       async function fetchUserPosts() {
         getUserPosts(userData.user_id).then((res) => {
-          setUserPosts(res.data);
+          setUserPosts(res.data.rows);
         });
       }
       fetchProfileImg();

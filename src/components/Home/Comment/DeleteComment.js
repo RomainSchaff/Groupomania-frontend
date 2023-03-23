@@ -41,7 +41,7 @@ function DeleteComment({ commentData, setComments }) {
     async function deleteComment() {
       deleteOneComment(commentData.comment_id).then(() => {
         getComments(commentData.post_id).then((res) => {
-          setComments(res.data);
+          setComments(res.data.rows);
         });
       });
     }

@@ -105,7 +105,7 @@ function Header() {
     if (userData) {
       async function fetchProfileImg() {
         getProfilImg(userData.user_id).then((res) => {
-          setProfileImg(res.data[0]);
+          setProfileImg(res.data.rows[0]);
         });
       }
       fetchProfileImg();

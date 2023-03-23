@@ -12,12 +12,12 @@ function Likes({ postId }) {
   useEffect(() => {
     async function fetchLikes() {
       getLikes(postId).then((res) => {
-        setLikes(res.data[0].total);
+        setLikes(res.data.rows[0].total);
       });
     }
     async function checkLike() {
       liked(postId, userData.user_id).then((res) => {
-        if (res.data.length !== 0) setPostLiked(true);
+        if (res.data.rows.length !== 0) setPostLiked(true);
       });
     }
     checkLike();
@@ -28,13 +28,14 @@ function Likes({ postId }) {
     e.preventDefault();
 
     async function likeUnlike() {
-      toggleLike(postId, userData.user_id).then(() => {
+      toggleLike(postId, userData.user_id).then((res) => {
+        console.log(res);
         if (postLiked) {
           setPostLiked(false);
           setLikes(likes - 1);
-        } else if (!postLiked) {
+        } else {
           setPostLiked(true);
-          setLikes(likes + 1);
+          setLikes(parseInt(likes) + 1);
         }
       });
     }

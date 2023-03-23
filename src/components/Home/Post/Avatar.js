@@ -8,8 +8,8 @@ function SetAvatar({ postUserId }) {
   useEffect(() => {
     async function fetchAvatar() {
       getProfilImg(postUserId).then((res) => {
-        if (res.data[0]) {
-          setAvatar(res.data[0].image_url);
+        if (res.data.rows[0]) {
+          setAvatar(res.data.rows[0].image_url);
         }
       });
     }

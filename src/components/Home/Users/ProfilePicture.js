@@ -16,8 +16,8 @@ function ProfilePicture({ userId }) {
 
   useEffect(() => {
     getProfilImg(userId).then((res) => {
-      if (res.data[0]) {
-        setProfileImg(res.data[0].image_url);
+      if (res.data.rows[0]) {
+        setProfileImg(res.data.rows[0].image_url);
       }
     });
   }, []);

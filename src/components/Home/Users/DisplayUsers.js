@@ -66,7 +66,6 @@ function DisplayUsers() {
         onClick={() => {
           if (count < users.length && count < 17) {
             setCount(count + 3);
-            console.log(count);
           }
         }}
       >

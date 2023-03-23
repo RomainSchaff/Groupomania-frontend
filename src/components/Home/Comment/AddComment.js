@@ -23,7 +23,7 @@ function AddComment({ postId, comments, setComments }) {
     async function uploadComment() {
       addComment(postId, data).then(() => {
         getComments(postId).then((res) => {
-          setComments(res.data);
+          setComments(res.data.rows);
         });
       });
     }
