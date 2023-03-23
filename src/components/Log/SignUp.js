@@ -115,7 +115,7 @@ function SignUp() {
     if (formCheck) {
       await axios({
         method: "post",
-        url: "http://localhost:4000/api/auth/signup",
+        url: "https://groupomania-backend-xl2a.onrender.com/api/auth/signup",
         headers: { "Content-Type": "application/json" },
         data: {
           user_lastname,
