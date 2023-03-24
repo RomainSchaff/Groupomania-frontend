@@ -127,8 +127,7 @@ function SignUp() {
         },
       })
         .then((res) => {
-          if (res.data.message.includes("Email")) {
-            console.log(res);
+          if (res.data.message.includes("déjà")) {
             emailError.innerHTML = "Email déjà utilisé";
           } else {
             setFormSubmit(true);
