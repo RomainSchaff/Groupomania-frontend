@@ -6,18 +6,18 @@ import styled from "styled-components";
 const CustomLogButton = styled.button`
   font-weight: bold;
   font-size: 16px;
-  padding: 20px;
+  padding: 15px;
   margin: 15px;
   color: white;
-  background-color: indianRed;
-  border-radius: 50px;
+  background-color: gray;
+  border-radius: 10px;
+  cursor: pointer;
   &:hover,
   &:focus {
-    background-color: DarkRed;
     box-shadow: 5px 5px 10px black;
   }
   &.active-btn {
-    background-color: DarkRed;
+    background-color: indianRed;
     box-shadow: 5px 5px 10px black;
   }
 `;
@@ -28,9 +28,7 @@ const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: navajowhite;
-  border: 3px solid FireBrick;
-  border-radius: 25px;
+  background-color: white;
 `;
 
 function Log({ signIn, signUp }) {

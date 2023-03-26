@@ -27,10 +27,9 @@ function DesactivateAccount() {
   const handleDesativate = () => {
     async function Desactivate() {
       putDesactivate(userData.user_id).then((res) => {
-        console.log(res);
         localStorage.removeItem("token");
         localStorage.removeItem("userData");
-        // window.location.reload();
+        window.location.reload();
       });
     }
     Desactivate();

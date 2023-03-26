@@ -1,13 +1,16 @@
 import { useState } from "react";
+import { Triangle } from "react-loader-spinner";
 import styled from "styled-components";
 import axios from "axios";
 import SignIn from "./SignIn";
 import { setDateFormat } from "../utils/date";
 
 const FormSignUp = styled.form`
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 18px;
 `;
 
 const ErrorMessage = styled.div`
@@ -16,6 +19,7 @@ const ErrorMessage = styled.div`
 `;
 
 function SignUp() {
+  const [loader, setLoader] = useState(false);
   const [formSubmit, setFormSubmit] = useState(false);
   const [user_firstname, setUser_firstname] = useState("");
   const [user_lastname, setUser_lastname] = useState("");
@@ -97,7 +101,7 @@ function SignUp() {
             termsChecker();
             break;
           default:
-            console.log("default");
+            console.log("default switch case");
         }
       });
       if (
@@ -113,6 +117,7 @@ function SignUp() {
     formChecker();
 
     if (formCheck) {
+      setLoader(true);
       await axios({
         method: "post",
         url: "https://groupomania-backend-xl2a.onrender.com/api/auth/signup",
@@ -127,6 +132,7 @@ function SignUp() {
         },
       })
         .then((res) => {
+          setLoader(false);
           if (res.data.message.includes("déjà")) {
             emailError.innerHTML = "Email déjà utilisé";
           } else {
@@ -187,7 +193,7 @@ function SignUp() {
             value={password}
           />
           <br />
-          <label htmlFor="passwordConfirm">Confirmation du mot de passe</label>
+          <label htmlFor="passwordConfirm">Confirmez le mdp</label>
           <input
             type="password"
             name="password"
@@ -200,14 +206,17 @@ function SignUp() {
           <input type="checkbox" id="terms" />
           <label htmlFor="terms">
             J'accepte les{" "}
-            <a href="/" target="_blank" rel="noopener noreferrer">
+            <a href="#" rel="noopener noreferrer">
               conditions générales
             </a>
           </label>
-          <br />
           <ErrorMessage className="terms error"></ErrorMessage>
           <br />
           <input type="submit" value="Valider inscription" />
+          <br />
+          {loader && (
+            <Triangle height="50" width="50" color="blue" ariaLabel="loading" />
+          )}
         </FormSignUp>
       )}
     </>

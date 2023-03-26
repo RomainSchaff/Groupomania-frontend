@@ -1,10 +1,13 @@
 import { useState } from "react";
+import { Triangle } from "react-loader-spinner";
 import styled from "styled-components";
 
 const FormSignIn = styled.form`
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 18px;
 `;
 
 const ErrorMessage = styled.div`
@@ -13,6 +16,7 @@ const ErrorMessage = styled.div`
 `;
 
 function SignIn() {
+  const [loader, setLoader] = useState(false);
   const [user_email, setEmail] = useState("");
   const [user_password, setPassword] = useState("");
 
@@ -22,6 +26,7 @@ function SignIn() {
     const passwordError = document.querySelector(".password.error");
     const accountNotActive = document.querySelector(".global.error");
 
+    setLoader(true);
     async function fetchData() {
       const requestsOptions = {
         method: "POST",
@@ -37,7 +42,7 @@ function SignIn() {
           requestsOptions
         );
         const data = await response.json();
-
+        setLoader(false);
         let errors;
         if (data.error) {
           errors = { email: "", password: "", accountNotActive: "" };
@@ -87,6 +92,10 @@ function SignIn() {
       <ErrorMessage className="password error"></ErrorMessage>
       <br />
       <input type="submit" value="Se connecter" />
+      <br />
+      {loader && (
+        <Triangle height="50" width="50" color="blue" ariaLabel="loading" />
+      )}
       <br />
       <ErrorMessage className="global error"></ErrorMessage>
     </FormSignIn>
