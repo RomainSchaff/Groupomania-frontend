@@ -7,9 +7,10 @@ import { setDateFormat } from "../utils/date";
 
 const FormSignUp = styled.form`
   margin-top: 15px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: baseline;
   font-size: 18px;
 `;
 
@@ -164,7 +165,7 @@ function SignUp() {
           />
           <ErrorMessage className="firstname error"></ErrorMessage>
           <br />
-          <label htmlFor="user_lastName">Nom de famille</label>
+          <label htmlFor="user_lastName">Nom</label>
           <input
             type="text"
             name="user_lastName"
@@ -193,7 +194,7 @@ function SignUp() {
             value={password}
           />
           <br />
-          <label htmlFor="passwordConfirm">Confirmez le mdp</label>
+          <label htmlFor="passwordConfirm">Confirmez mdp</label>
           <input
             type="password"
             name="password"

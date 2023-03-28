@@ -1,0 +1,12 @@
+input {
+  width: 100%;
+  margin-top: 3px;
+  padding: 7px 10px;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  font-weight: bold;
+  background-color: goldenrod;
+  cursor: pointer;
+}

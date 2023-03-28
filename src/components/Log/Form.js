@@ -1,5 +1,6 @@
 import Log from "./Log";
 import styled from "styled-components";
+import "./Form.css";
 
 const LogContainer = styled.div`
   display: flex;

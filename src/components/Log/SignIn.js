@@ -4,9 +4,10 @@ import styled from "styled-components";
 
 const FormSignIn = styled.form`
   margin-top: 15px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: baseline;
   font-size: 18px;
 `;
 
