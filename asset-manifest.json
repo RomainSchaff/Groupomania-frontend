@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Groupomania-frontend/static/css/main.b5e4ca2c.css",
-    "main.js": "/Groupomania-frontend/static/js/main.5ce1438b.js",
+    "main.css": "/Groupomania-frontend/static/css/main.62b00324.css",
+    "main.js": "/Groupomania-frontend/static/js/main.61c00ad2.js",
     "static/media/icon.svg": "/Groupomania-frontend/static/media/icon.df011b719943d37c30ce5f1d65b001d5.svg",
     "index.html": "/Groupomania-frontend/index.html",
-    "main.b5e4ca2c.css.map": "/Groupomania-frontend/static/css/main.b5e4ca2c.css.map",
-    "main.5ce1438b.js.map": "/Groupomania-frontend/static/js/main.5ce1438b.js.map"
+    "main.62b00324.css.map": "/Groupomania-frontend/static/css/main.62b00324.css.map",
+    "main.61c00ad2.js.map": "/Groupomania-frontend/static/js/main.61c00ad2.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5e4ca2c.css",
-    "static/js/main.5ce1438b.js"
+    "static/css/main.62b00324.css",
+    "static/js/main.61c00ad2.js"
   ]
 }
